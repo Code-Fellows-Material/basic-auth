@@ -8,7 +8,8 @@ const base64 = require('base-64');
 require('dotenv').config();
 const { Sequelize, DataTypes } = require('sequelize');
 
-const PORT = process.env.PORT || PORT;
+const PORT = process.env.PORT || 3000;
+const DATABASE_URL = process.env.DATABASE_URL || 'sqlite:memory';
 
 // Prepare the express app
 const app = express();
