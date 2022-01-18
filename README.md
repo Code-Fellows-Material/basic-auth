@@ -1,4 +1,4 @@
-# basic-api-server
+# basic-auth
 
 Express server that implements Basic Authentication, with signup and signin capabilities, using a Postgres database for storage. for Code Fellows 401
 
