@@ -3,10 +3,9 @@ const superTest = require('supertest');
 const { app } = require('../lib/server.js');
 const mockRequest = superTest(app);
 
-process.env.NODE_ENV = 'test'
-
 const {signUpHandler} = require('../lib/auth/signUp');
 const {signInHandler} = require('../lib/auth/signUp');
+const { Users } = require('../lib/models');
 
 let testUser = { username: 'tester', password: 'test' };
 
