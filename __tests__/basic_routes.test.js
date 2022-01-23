@@ -8,6 +8,12 @@ const {signInHandler} = require('../lib/auth/signUp');
 
 let testUser = { username: 'tester', password: 'test' };
 
+// Pre-load our database with fake users
+beforeAll( async (done) => {
+  await Users.create(testUser);
+  done();
+});
+
 
 describe('Tests for basic auth routes', () => {
 
