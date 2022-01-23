@@ -5,16 +5,8 @@ const mockRequest = superTest(app);
 
 const {signUpHandler} = require('../lib/auth/signUp');
 const {signInHandler} = require('../lib/auth/signUp');
-const { Users } = require('../lib/models');
-
 
 let testUser = { username: 'tester', password: 'test' };
-
-// Pre-load our database with fake users
-beforeAll( async (done) => {
-  await Users.create(testUser);
-  done();
-});
 
 
 describe('Tests for basic auth routes', () => {
